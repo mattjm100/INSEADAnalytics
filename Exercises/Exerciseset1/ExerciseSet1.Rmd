@@ -184,7 +184,7 @@ myData + StockReturns[1:40,]
 
 **Your Answers here:**
 1. 20
-2. 
+2. it will give an error
 <br>
 <br>
 
