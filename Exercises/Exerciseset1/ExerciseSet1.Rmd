@@ -87,8 +87,8 @@ pnl_plot(SPY)
 3. *(Extra points)* What if we want to also see the returns of another company, say Yahoo!, in the same period? Can you get that data and report the statistics for Yahoo!'s stock, too? 
 
 **Your Answers here:**
-<br>
-<br>
+<1. This is done where it concatenates SPY and AAPL, i.e. here --------> mytickers = c("SPY", "AAPL") >
+<2. >
 <br>
 <br>
 
