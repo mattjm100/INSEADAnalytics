@@ -2,6 +2,9 @@
 title: "A Market Segmentation and Purchase Drivers Process"
 author: "T. Evgeniou"
 output:
+  pdf_document:
+    includes:
+      in_header: ../../AnalyticsStyles/default.sty
   html_document:
     css: ../../AnalyticsStyles/default.css
     theme: paper
@@ -9,9 +12,6 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: yes
-  pdf_document:
-    includes:
-      in_header: ../../AnalyticsStyles/default.sty
 always_allow_html: yes
 ---
 
@@ -322,9 +322,20 @@ iprint.df(Rotated_Factors_thres, scale=TRUE)
 
 **Answers**
 
-*1. First component - Status symbol. Second component - experience. Yes makes business sense. 
-*
-*
+1. First component - Status symbol. Second component - experience. Yes makes business sense. 
+
+2. a) We should use five factors, as this is the minimum number we need to explain over 50% of the variance. The rest of the variance may likely be noise. b) If you look at the factors we chose, there is a clear logical argument for including each of them in the analysis as they have strong correlations with questions that appear to be important purchase drivers. c) We obviously want to choose factors that are most relevant to the business question at hand, namely whether customers are likely to purchase a boat or not.
+
+3. We would interpret the factors as following: 
+
+ 1. Status symbol
+ 2. Experience
+ 3. Brand/quality
+ 4. experience of the person
+ 5. Highly price sensitive 
+
+4. This is an efficent way of collecting and analyzing data, however it is critical to have a robust understanding of the process, data, and analytic tools in order to adequately perform the analysis.
+
 *
 *
 *
@@ -351,7 +362,9 @@ iprint.df(t(head(NEW_ProjectData, 10)), scale=TRUE)
 
 **Answers**
 
-*
+1. These types of customers see boats as a status symbol, and view boating as an adventurous activity that helps them escape. They also value reputable brands, and tend to be hobbyists. Finally, they are likely somewhat price sensitive. 
+
+2. We would select: Component 1 - Q9 ("Status Symbol"), Component 2 - Q18 ("feeling adventure"), Q21 ("helps me escape"), Component 3 - Q4 ("reputable brand"), Component 4 - Q11 ("perform minor boat repairs on my own"), Component 5 - Q2 ("when buying a boat lowest price is more important than brand")
 *
 *
 *
