@@ -2,9 +2,6 @@
 title: "A Market Segmentation and Purchase Drivers Process"
 author: "T. Evgeniou"
 output:
-  pdf_document:
-    includes:
-      in_header: ../../AnalyticsStyles/default.sty
   html_document:
     css: ../../AnalyticsStyles/default.css
     theme: paper
@@ -12,6 +9,9 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: yes
+  pdf_document:
+    includes:
+      in_header: ../../AnalyticsStyles/default.sty
 always_allow_html: yes
 ---
 
@@ -400,7 +400,7 @@ segmentation_attributes_used = c(28,25,27,14,20,8,3,12,13,5,9,11,2,30,24) #c(10,
 profile_attributes_used = c(2:82) 
 
 # Please ENTER the number of clusters to eventually use for this report
-numb_clusters_used = 7 # for boats possibly use 5, for Mall_Visits use 3
+numb_clusters_used = 5 # for boats possibly use 5, for Mall_Visits use 3
 
 # Please enter the method to use for the segmentation:
 profile_with = "hclust" #  "hclust" or "kmeans"
@@ -580,14 +580,16 @@ iprint.df(round(cluster_profile_ratios-1, 2))
 
 **Answers**
 
+*1. This represents the average score of each segment scaled with respect to the average population. I.e., this represents the distance of the segment from the population, if the segment differs from the population. Also, from this table, we can see that the segmenting questions show greater deviation than the profiling questions and are more informative. <br><br>
 *
-*
-*
-*
-*
-*
-*
-*
+2. 
+Based on the snake plot above, some of the key features of the population includes:
+
+ 1. Status symbol: these are people who perceive the boat as a status symbol and the ownership of the boat is important to them.
+ 2. Experience: this category of people perceive boats as a hobby and to experience something new in their lives.
+ 3. Brand/quality: for this segment, the brand and quality of the boat is very important. 
+ 4. Knowledge/ experience of the person: this segment is well-versed with boats and can undertake repair activities themselves.
+ 5. Highly price sensitive: for this segment, price is of prime importance. From the data, this segment does not seem very passionate about buying a boat.
 *
 *
 
@@ -598,15 +600,21 @@ We should also consider the robustness of our analysis as we change the clusteri
 **Questions**
 
 1. How many segments are there in our market? How many do you select and why? Try a few and explain your final choice based on a) statistical arguments, b) on interpretation arguments, c) on business arguments (**you need to consider all three types of arguments**)
+
+
 2. Can you describe the segments you found based on the profiles?
 3. What if you change the number of factors and in general you *iterate the whole analysis*? **Iterations** are key in data science.
 4. Can you now answer the [Boats case questions](http://inseaddataanalytics.github.io/INSEADAnalytics/Boats-A-prerelease.pdf)? What business decisions do you recommend to this company based on your analysis?
 
 **Answers**
 
-*
-*
-*
+*1. According to statistical arguments, there are 5 segments in our market. However, after analyzing the data, only 4 of the 5 segments are likely to buy a boat. Segment 5 does not seem very passionate about any of the things associated with boating. (See previous answers). Hence, we suggest to focus our marketing effort on the remaining 4 segments. 
+<br>
+
+2. Answered previously <br>.
+3. In case of iteration, the results change. However, the results don't change to that extent - i.e., the overall conclusion remains the same. 
+<br>
+4. Our recommendation is that as we have rich data for each of the segments, we can potentially build boats that cater to each of the segment needs. For e.g., For segment 2 (those who look at boats as gaining new experiences), we can consider making boats with differenciating factors (such as more facilities, funkier looks and branding).
 *
 *
 *
